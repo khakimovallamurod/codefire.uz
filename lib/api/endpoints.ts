@@ -17,6 +17,8 @@ export const api = {
       request("/auth/login", { method: "POST", body, schema: (s) => s.meSchema }),
     register: (body: { fullName: string; phone: string; username: string; password: string }) =>
       request("/auth/register", { method: "POST", body, schema: (s) => s.meSchema }),
+    requestPasswordReset: (login: string) =>
+      request("/auth/password-reset", { method: "POST", body: { login }, schema: (s) => s.okSchema }),
     logout: () => request("/auth/logout", { method: "POST", schema: (s) => s.okSchema }),
   },
 

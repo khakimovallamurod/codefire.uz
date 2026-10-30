@@ -39,6 +39,7 @@ frontend never touches them.
 | --- | --- | --- | --- |
 | POST | `/auth/login` | `{ login, password }` (login = username or phone `+998901234567`) | `Me`, sets cookies. 400 `invalid_credentials` |
 | POST | `/auth/register` | `{ fullName, phone, username, password }`. `phone` is E.164 without spaces: `+998901234567` (the form shows `+998 (90) 123-45-67`). `fullName` is "Ism Familiya" in one field | `Me`, sets cookies. 400 with `fields` (e.g. `username` or `phone` taken) |
+| POST | `/auth/password-reset` | `{ login }` (username, email, or phone) | `{ ok: true }` whether or not the account exists; send a one-time reset link/code when it does |
 | POST | `/auth/refresh` | — | `{ ok: true }`, rotates cookies. 401 if refresh expired |
 | POST | `/auth/logout` | — | `{ ok: true }`, clears cookies |
 | GET | `/auth/me` | — | `Me`, or **401** when signed out |

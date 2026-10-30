@@ -1,7 +1,6 @@
-import { Binary } from "lucide-react";
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ComingSoon } from "@/components/shell/coming-soon";
+import { AlgorithmsPage } from "@/components/features/algorithms";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -9,9 +8,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return { title: t("algorithms"), robots: { index: false } };
 }
 
-export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
-  const { locale } = await params;
+export default async function Page({ params }: { params: Promise<{ locale: string; slug?: string[] }> }) {
+  const { locale, slug } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations("nav");
-  return <ComingSoon section={t("algorithms")} icon={Binary} />;
+  return <AlgorithmsPage slug={slug?.[0]} />;
 }

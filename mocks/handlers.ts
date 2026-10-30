@@ -87,6 +87,16 @@ export const handlers = [
     }
     return HttpResponse.json(me());
   }),
+  http.post(`${base}/auth/password-reset`, async ({ request }) => {
+    await delay(400);
+    const body = (await request.json()) as { login?: string };
+    if (!body.login?.trim()) {
+      return error(400, "validation_error", "Login yoki telefon raqamingizni kiriting.", {
+        login: ["Login yoki telefon raqamingizni kiriting."],
+      });
+    }
+    return HttpResponse.json({ ok: true });
+  }),
   http.post(`${base}/auth/refresh`, () => error(401, "token_not_valid", "Sessiya tugagan.")),
   http.post(`${base}/auth/logout`, () => HttpResponse.json({ ok: true })),
 

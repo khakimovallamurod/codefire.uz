@@ -330,6 +330,13 @@
   "clans": {
     "title": "Klanlar",
     "description": "Birgalikda mashq qiling. Klan sharafi a'zolarning yechimlari va hissasidan yig'iladi.",
+    "empty": "Hozircha klanlar yo'q.",
+    "loadFailed": "Klanlarni yuklab bo'lmadi.",
+    "membersCount": "{count} a'zo",
+    "honorCount": "{count} sharaf",
+    "honor": "Sharaf",
+    "rank": "O'rin",
+    "leader": "Rahbar",
     "colRank": "#",
     "colClan": "Klan",
     "colMembers": "A'zolar",
@@ -339,6 +346,8 @@
     "allies": "Ittifoqchilar",
     "noAllies": "Ittifoqchi klanlar yo'q.",
     "join": "Qo'shilish",
+    "joined": "A'zosiz",
+    "backToClans": "Klanlarga qaytish",
     "role": {
       "leader": "Rahbar",
       "officer": "Ofitser",
@@ -354,6 +363,10 @@
   "courses": {
     "title": "Kurslar",
     "description": "Nazariya va amaliyot birga: har bir darsdan keyin shu mavzudagi masalalar.",
+    "empty": "Hozircha kurslar mavjud emas.",
+    "loadFailed": "Kurslarni yuklab bo'lmadi.",
+    "retry": "Qayta urinish",
+    "backToCourses": "Kurslarga qaytish",
     "lessons": "{count} dars",
     "problems": "{count} masala",
     "hours": "{count} soat",
@@ -372,6 +385,9 @@
   "blogs": {
     "title": "Bloglar",
     "description": "Raund tahlillari, o'quv maqolalar va hamjamiyat yangiliklari.",
+    "empty": "Hozircha maqolalar yo'q.",
+    "loadFailed": "Maqolalarni yuklab bo'lmadi.",
+    "backToBlogs": "Bloglarga qaytish",
     "readingTime": "{count} daqiqa o'qish",
     "comments": "Izohlar",
     "commentsCount": "{count} izoh",
@@ -380,8 +396,119 @@
     "postComment": "Izoh qoldirish",
     "commentPosted": "Izoh qo'shildi",
     "commentFailed": "Izoh qo'shilmadi. Qayta urining.",
+    "likeFailed": "Yoqtirish holatini saqlab bo'lmadi.",
     "signInToComment": "Izoh yozish uchun tizimga kiring.",
+    "signIn": "Kirish",
+    "signInToLike": "Yoqtirish uchun tizimga kiring.",
     "noComments": "Hali izoh yo'q. Birinchi bo'ling."
+  },
+  "resetPassword": {
+    "title": "Parolni tiklash",
+    "description": "Hisobingizga bog'langan login, email yoki telefon raqamini kiriting. Agar hisob topilsa, tiklash yo'riqnomasi yuboriladi.",
+    "login": "Login, email yoki telefon",
+    "placeholder": "sardorbek yoki +998901234567",
+    "submit": "Tiklash havolasini yuborish",
+    "successTitle": "So'rov qabul qilindi",
+    "successBody": "Agar bu ma'lumotlarga mos hisob mavjud bo'lsa, parolni tiklash yo'riqnomasi yuborildi.",
+    "backToLogin": "Kirish sahifasiga qaytish",
+    "failed": "So'rovni yuborib bo'lmadi. Qayta urinib ko'ring.",
+    "required": "Login, email yoki telefonni kiriting."
+  },
+  "settings": {
+    "title": "Sozlamalar",
+    "description": "Hisobingiz va Codefire ko'rinishini moslang.",
+    "account": "Hisob",
+    "signedOut": "Hisob ma'lumotlarini ko'rish uchun tizimga kiring.",
+    "loading": "Hisob yuklanmoqda…",
+    "notSet": "Kiritilmagan",
+    "signIn": "Kirish",
+    "profile": "Profil",
+    "username": "Foydalanuvchi nomi",
+    "email": "Email",
+    "phone": "Telefon",
+    "appearance": "Ko'rinish",
+    "theme": "Mavzu",
+    "themeDescription": "Yorug' yoki tungi ko'rinishni tanlang.",
+    "language": "Interfeys tili",
+    "languageDescription": "Sahifa matnlari uchun til.",
+    "editor": "Muharrir",
+    "fontSize": "Shrift o'lchami",
+    "tabSize": "Tab kengligi",
+    "autoSave": "Kod loyihasini avtomatik saqlash",
+    "autoSaveDescription": "Muharrirdagi sozlamalar ushbu brauzerda saqlanadi.",
+    "saved": "Sozlama saqlandi",
+    "saveFailed": "Sozlamani brauzerda saqlab bo'lmadi.",
+    "light": "Yorug'",
+    "dark": "Tungi",
+    "system": "Tizim bo'yicha",
+    "characters": "{count} belgi"
+  },
+  "roadmap": {
+    "title": "Dasturlash yo'l xaritasi",
+    "description": "Asoslardan algoritmik musobaqalargacha bo'lgan bosqichma-bosqich o'quv rejasi.",
+    "progress": "{done} / {total} mavzu bajarildi",
+    "clear": "Progressni tozalash",
+    "resetConfirm": "Barcha belgilangan mavzular bekor qilinsinmi?",
+    "storageError": "O'rganish progressini brauzerda saqlab bo'lmadi.",
+    "markComplete": "{title} mavzusini bajarilgan deb belgilash",
+    "openResource": "Ochish",
+    "finished": "Yo'l xaritasidagi barcha mavzular bajarildi!",
+    "tracks": {
+      "fundamentals": {
+        "title": "Dasturlash asoslari",
+        "description": "Til, murakkablik va sodda masalalarni yechish.",
+        "steps": [
+          { "title": "O'zgaruvchilar va kiritish-chiqarish", "description": "Turlar, shartlar, sikllar va standart kiritish-chiqarish bilan tanishing.", "href": "/problems" },
+          { "title": "Massivlar va satrlar", "description": "Indekslar, kesmalar, sanash va satrlarni qayta ishlashni mashq qiling.", "href": "/problems" },
+          { "title": "Murakkablik tahlili", "description": "Vaqt va xotira chegaralariga qarab yechimni baholang.", "href": "/problems" },
+          { "title": "Saralash va qidirish", "description": "Saralash, ikkilik qidiruv va invariantlardan foydalaning.", "href": "/algorithms/binary-search" }
+        ]
+      },
+      "structures": {
+        "title": "Ma'lumotlar tuzilmalari",
+        "description": "Samarali saqlash va tezkor so'rovlar.",
+        "steps": [
+          { "title": "Stek va navbat", "description": "LIFO/FIFO tamoyillarini masalalarda qo'llang.", "href": "/problems" },
+          { "title": "Xesh-jadval va to'plam", "description": "Takrorlarni aniqlash va chastotalarni hisoblashni o'rganing.", "href": "/problems" },
+          { "title": "Daraxtlar va graf", "description": "Bog'lanishlar, daraxtlar va grafni ifodalash usullarini ko'ring.", "href": "/algorithms/bfs" },
+          { "title": "Segment daraxti", "description": "Oraliq so'rovlari va yangilanishlarni logarifmik vaqtda bajaring.", "href": "/algorithms/segment-tree" }
+        ]
+      },
+      "algorithms": {
+        "title": "Algoritmik fikrlash",
+        "description": "Tanlash, qidirish va optimallashtirish usullari.",
+        "steps": [
+          { "title": "Ikki ko'rsatkich", "description": "Saralangan massiv va satrlarni chiziqli vaqtda ko'rib chiqing.", "href": "/algorithms/two-pointers" },
+          { "title": "Graf bo'ylab qidiruv", "description": "BFS va DFS bilan masofa, komponent va yo'llarni toping.", "href": "/algorithms/bfs" },
+          { "title": "Dinamik dasturlash", "description": "Holat, o'tish va asosiy holatlarni aniqlang.", "href": "/algorithms/dynamic-programming" },
+          { "title": "Musobaqa amaliyoti", "description": "O'rganganlaringizni vaqtli raund va tahlillar bilan mustahkamlang.", "href": "/contests" }
+        ]
+      }
+    }
+  },
+  "algorithms": {
+    "title": "Algoritmlar",
+    "description": "Asosiy algoritmik usullarni o'rganing va masalalarda qo'llang.",
+    "search": "Algoritm qidirish",
+    "empty": "Bu so'rov bo'yicha algoritm topilmadi.",
+    "notFound": "Algoritm topilmadi.",
+    "back": "Algoritmlarga qaytish",
+    "complexity": "Murakkablik",
+    "example": "Misol",
+    "related": "Bog'liq masalalar",
+    "openProblems": "Masalalarni ko'rish",
+    "practiceTitle": "Amaliyot",
+    "practiceDescription": "Ushbu usulni mustahkamlash uchun mavzuga mos masalalarni yeching.",
+    "learnMore": "Batafsil",
+    "topics": {
+      "binary-search": { "title": "Ikkilik qidiruv", "category": "Qidirish", "description": "Saralangan oraliqda javobni har qadamda ikki baravar qisqartirib topadi.", "complexity": "O(log n)", "example": "Saralangan massivda qiymatning birinchi mos indeksini topish.", "href": "/problems" },
+      "two-pointers": { "title": "Ikki ko'rsatkich", "category": "Massivlar", "description": "Ikki indeksni muvofiqlashtirib, juftlik va oraliq masalalarini chiziqli vaqtda yechadi.", "complexity": "O(n)", "example": "Yig'indisi berilgan qiymatga teng juftlikni saralangan massivdan topish.", "href": "/problems" },
+      "bfs": { "title": "Kenglik bo'yicha qidiruv (BFS)", "category": "Graflar", "description": "Grafni qatlamlar bo'yicha aylanib, vaznsiz grafdagi eng qisqa masofani topadi.", "complexity": "O(V + E)", "example": "Boshlang'ich tugundan barcha tugunlargacha eng kam qadamlar.", "href": "/problems/112B" },
+      "dfs": { "title": "Chuqurlik bo'yicha qidiruv (DFS)", "category": "Graflar", "description": "Graf bo'ylab imkon qadar chuqur yurib, komponent va sikllarni aniqlaydi.", "complexity": "O(V + E)", "example": "Bog'langan komponentlar sonini hisoblash.", "href": "/problems" },
+      "dynamic-programming": { "title": "Dinamik dasturlash", "category": "Optimallashtirish", "description": "Takrorlanuvchi qismmasalalar natijasini saqlab, ularni qayta hisoblashdan qochadi.", "complexity": "Holatlar soni × o'tishlar", "example": "Eng uzun umumiy qismketma-ketlik yoki minimal xarajat.", "href": "/problems/208C" },
+      "dijkstra": { "title": "Dijkstra algoritmi", "category": "Graflar", "description": "Manfiy bo'lmagan vaznli grafda bitta manbadan eng qisqa masofalarni topadi.", "complexity": "O((V + E) log V)", "example": "Yo'l uzunliklari berilgan xaritada eng arzon marshrut.", "href": "/problems/500F" },
+      "segment-tree": { "title": "Segment daraxti", "category": "Ma'lumotlar tuzilmasi", "description": "Massiv oraliqlaridagi so'rov va yangilanishlarni samarali bajaradi.", "complexity": "Qurish O(n), so'rov O(log n)", "example": "Oraliq maksimumini topish va elementlarni yangilash.", "href": "/problems/421E" }
+    }
   },
   "landing": {
     "eyebrow": "Algoritmik masalalar va musobaqalar platformasi",

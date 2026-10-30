@@ -1,7 +1,6 @@
-import { Map } from "lucide-react";
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
-import { ComingSoon } from "@/components/shell/coming-soon";
+import { RoadmapPage } from "@/components/features/roadmap";
 
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
@@ -9,9 +8,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return { title: t("roadmap"), robots: { index: false } };
 }
 
-export default async function Page({ params }: { params: Promise<{ locale: string }> }) {
+export default async function Page({ params }: { params: Promise<{ locale: string; slug?: string[] }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations("nav");
-  return <ComingSoon section={t("roadmap")} icon={Map} />;
+  return <RoadmapPage />;
 }

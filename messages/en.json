@@ -330,6 +330,13 @@
   "clans": {
     "title": "Clans",
     "description": "Practice together. Clan honor comes from members' solutions and contribution.",
+    "empty": "There are no clans yet.",
+    "loadFailed": "Could not load clans.",
+    "membersCount": "{count} members",
+    "honorCount": "{count} honor",
+    "honor": "Honor",
+    "rank": "Rank",
+    "leader": "Leader",
     "colRank": "#",
     "colClan": "Clan",
     "colMembers": "Members",
@@ -339,6 +346,8 @@
     "allies": "Allies",
     "noAllies": "No allied clans.",
     "join": "Join",
+    "joined": "Joined",
+    "backToClans": "Back to clans",
     "role": {
       "leader": "Leader",
       "officer": "Officer",
@@ -354,6 +363,10 @@
   "courses": {
     "title": "Courses",
     "description": "Theory and practice together: every lesson ends with problems on the topic.",
+    "empty": "There are no courses yet.",
+    "loadFailed": "Could not load courses.",
+    "retry": "Retry",
+    "backToCourses": "Back to courses",
     "lessons": "{count} lessons",
     "problems": "{count} problems",
     "hours": "{count} h",
@@ -372,6 +385,9 @@
   "blogs": {
     "title": "Blogs",
     "description": "Round editorials, tutorials and community news.",
+    "empty": "There are no articles yet.",
+    "loadFailed": "Could not load articles.",
+    "backToBlogs": "Back to blogs",
     "readingTime": "{count} min read",
     "comments": "Comments",
     "commentsCount": "{count} comments",
@@ -380,8 +396,119 @@
     "postComment": "Post comment",
     "commentPosted": "Comment posted",
     "commentFailed": "Couldn't post the comment. Try again.",
+    "likeFailed": "Could not save your like.",
     "signInToComment": "Sign in to comment.",
+    "signIn": "Sign in",
+    "signInToLike": "Sign in to like this article.",
     "noComments": "No comments yet. Be the first."
+  },
+  "resetPassword": {
+    "title": "Reset password",
+    "description": "Enter the username, email, or phone number linked to your account. If an account is found, recovery instructions will be sent.",
+    "login": "Username, email, or phone",
+    "placeholder": "username or +998901234567",
+    "submit": "Send recovery instructions",
+    "successTitle": "Request received",
+    "successBody": "If an account matches these details, password recovery instructions have been sent.",
+    "backToLogin": "Back to sign in",
+    "failed": "Could not send the request. Please try again.",
+    "required": "Enter a username, email, or phone number."
+  },
+  "settings": {
+    "title": "Settings",
+    "description": "Customize your account and Codefire experience.",
+    "account": "Account",
+    "signedOut": "Sign in to view your account details.",
+    "loading": "Loading account…",
+    "notSet": "Not provided",
+    "signIn": "Sign in",
+    "profile": "Profile",
+    "username": "Username",
+    "email": "Email",
+    "phone": "Phone",
+    "appearance": "Appearance",
+    "theme": "Theme",
+    "themeDescription": "Choose a light or dark appearance.",
+    "language": "Interface language",
+    "languageDescription": "Language used for page text.",
+    "editor": "Editor",
+    "fontSize": "Font size",
+    "tabSize": "Tab width",
+    "autoSave": "Automatically save editor drafts",
+    "autoSaveDescription": "Editor preferences are stored in this browser.",
+    "saved": "Preference saved",
+    "saveFailed": "Could not save the preference in this browser.",
+    "light": "Light",
+    "dark": "Dark",
+    "system": "System",
+    "characters": "{count} characters"
+  },
+  "roadmap": {
+    "title": "Programming roadmap",
+    "description": "A step-by-step learning path from fundamentals to competitive programming.",
+    "progress": "{done} of {total} topics completed",
+    "clear": "Clear progress",
+    "resetConfirm": "Clear all completed topics?",
+    "storageError": "Could not save your learning progress in this browser.",
+    "markComplete": "Mark {title} as completed",
+    "openResource": "Open",
+    "finished": "You completed every topic in the roadmap!",
+    "tracks": {
+      "fundamentals": {
+        "title": "Programming fundamentals",
+        "description": "Languages, complexity, and solving simple problems.",
+        "steps": [
+          { "title": "Variables and input/output", "description": "Learn data types, conditions, loops, and standard input/output.", "href": "/problems" },
+          { "title": "Arrays and strings", "description": "Practice indexing, slices, counting, and string processing.", "href": "/problems" },
+          { "title": "Complexity analysis", "description": "Estimate time and memory use against problem limits.", "href": "/problems" },
+          { "title": "Sorting and searching", "description": "Use sorting, binary search, and invariants.", "href": "/algorithms/binary-search" }
+        ]
+      },
+      "structures": {
+        "title": "Data structures",
+        "description": "Efficient storage and fast queries.",
+        "steps": [
+          { "title": "Stack and queue", "description": "Apply LIFO/FIFO patterns to problems.", "href": "/problems" },
+          { "title": "Hash map and set", "description": "Find duplicates and count frequencies.", "href": "/problems" },
+          { "title": "Trees and graphs", "description": "Explore relationships, trees, and graph representations.", "href": "/algorithms/bfs" },
+          { "title": "Segment tree", "description": "Answer range queries and updates in logarithmic time.", "href": "/algorithms/segment-tree" }
+        ]
+      },
+      "algorithms": {
+        "title": "Algorithmic thinking",
+        "description": "Selection, search, and optimization techniques.",
+        "steps": [
+          { "title": "Two pointers", "description": "Process sorted arrays and strings in linear time.", "href": "/algorithms/two-pointers" },
+          { "title": "Graph traversal", "description": "Find distances, components, and paths with BFS and DFS.", "href": "/algorithms/bfs" },
+          { "title": "Dynamic programming", "description": "Define states, transitions, and base cases.", "href": "/algorithms/dynamic-programming" },
+          { "title": "Contest practice", "description": "Reinforce your skills with timed rounds and editorials.", "href": "/contests" }
+        ]
+      }
+    }
+  },
+  "algorithms": {
+    "title": "Algorithms",
+    "description": "Learn core algorithmic techniques and apply them to problems.",
+    "search": "Search algorithms",
+    "empty": "No algorithms match this search.",
+    "notFound": "Algorithm not found.",
+    "back": "Back to algorithms",
+    "complexity": "Complexity",
+    "example": "Example",
+    "related": "Related problems",
+    "openProblems": "Browse problems",
+    "practiceTitle": "Practice",
+    "practiceDescription": "Solve related problems to reinforce this technique.",
+    "learnMore": "Learn more",
+    "topics": {
+      "binary-search": { "title": "Binary search", "category": "Searching", "description": "Finds an answer in a sorted range by halving the search space at each step.", "complexity": "O(log n)", "example": "Find the first matching index in a sorted array.", "href": "/problems" },
+      "two-pointers": { "title": "Two pointers", "category": "Arrays", "description": "Coordinates two indices to solve pair and range problems in linear time.", "complexity": "O(n)", "example": "Find a pair with a target sum in a sorted array.", "href": "/problems" },
+      "bfs": { "title": "Breadth-first search (BFS)", "category": "Graphs", "description": "Traverses a graph layer by layer and finds shortest paths in unweighted graphs.", "complexity": "O(V + E)", "example": "Minimum number of edges from a source to every vertex.", "href": "/problems/112B" },
+      "dfs": { "title": "Depth-first search (DFS)", "category": "Graphs", "description": "Explores as far as possible along each branch to detect components and cycles.", "complexity": "O(V + E)", "example": "Count the connected components of a graph.", "href": "/problems" },
+      "dynamic-programming": { "title": "Dynamic programming", "category": "Optimization", "description": "Stores overlapping subproblem results to avoid recalculating them.", "complexity": "Number of states × transitions", "example": "Longest common subsequence or minimum cost.", "href": "/problems/208C" },
+      "dijkstra": { "title": "Dijkstra's algorithm", "category": "Graphs", "description": "Finds shortest paths from one source in graphs with non-negative edge weights.", "complexity": "O((V + E) log V)", "example": "Find the cheapest route on a weighted map.", "href": "/problems/500F" },
+      "segment-tree": { "title": "Segment tree", "category": "Data structures", "description": "Efficiently answers range queries and applies updates to an array.", "complexity": "Build O(n), query O(log n)", "example": "Find a range maximum and update array values.", "href": "/problems/421E" }
+    }
   },
   "landing": {
     "eyebrow": "Algorithmic problems and contests",
